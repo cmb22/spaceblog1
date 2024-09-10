@@ -108,15 +108,6 @@ const Header = () => {
                                             <HelpOutlineOutlinedIcon />
                                         </Button>
                                     </Tooltip>
-                                    <Tooltip
-                                        arrow
-                                        placement="top"
-                                        title="Switch Language"
-                                        disableInteractive
-                                        sx={tooltip}
-                                    >
-                                        {/* <Switcher /> */}
-                                    </Tooltip>
                                     <Link href="/auth/login" style={{ paddingRight: 0 }}>
                                         <Button sx={loginbtn}>
                                             <AccountCircleOutlinedIcon />

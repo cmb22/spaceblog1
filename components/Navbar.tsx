@@ -46,18 +46,18 @@ export default function Navbar(props: any) {
         console.log("data", data)
         if (data?.nodeByUri?.translations) {
             const languages = data?.nodeByUri?.translations.map((item: any) => item.language.slug).sort()
-            // console.log("languages", languages)
+            console.log("languages", languages)
             setCurrentPostAvailLanguages(languages)
         } else {
             const availLocals = (locales || []).filter((item) => item !== activeLocale).sort()
-            // console.log("availLocals", availLocals, activeLocale)
+            console.log("availLocals", availLocals, activeLocale)
             setCurrentPostAvailLanguages(availLocals)
         }
 
     }
     const onSelectChange = (e: any) => {
         const locale = e.target.value;
-
+        // console.log("onchange", e)
         routeProps.push(asPath, asPath, {
             locale,
             scroll: false
