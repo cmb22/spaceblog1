@@ -142,7 +142,7 @@ const Header = () => {
         </>
     );
 };
-const loginbtn = (theme) => ({
+const loginbtn = (theme: any) => ({
     width: "auto",
     height: "auto",
     padding: "0.375rem 0.5rem",
@@ -176,7 +176,7 @@ const loginbtn = (theme) => ({
     },
 });
 
-const nametxt = (theme) => ({
+const nametxt = (theme: any) => ({
     fontFamily: "'Karla', sans-serif",
     color: "#fff",
     fontSize: "1.625rem",
@@ -189,7 +189,7 @@ const nametxt = (theme) => ({
         fontSize: "1.125rem",
     },
 });
-const headfix = (theme) => ({
+const headfix = (theme: any) => ({
     display: "flex",
     alignItems: "center",
     textAlign: "center",
@@ -205,7 +205,7 @@ const headfix = (theme) => ({
     },
 });
 
-const logowidth = (theme) => ({
+const logowidth = (theme: any) => ({
     width: "100%",
     maxWidth: "250px",
     a: {
@@ -223,7 +223,7 @@ const logowidth = (theme) => ({
     },
 });
 
-const navItems = (theme) => ({
+const navItems = (theme: any) => ({
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
@@ -290,7 +290,7 @@ const mlAuto = () => ({
     marginLeft: "auto",
     color: "#727272",
 });
-const avtTitle = (theme) => ({
+const avtTitle = (theme: any) => ({
     color: "#000",
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.625rem",
@@ -301,7 +301,7 @@ const avtTitle = (theme) => ({
         fontSize: "1.25rem",
     },
 });
-const avtSubtitle = (theme) => ({
+const avtSubtitle = (theme: any) => ({
     color: "#727272",
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.5rem",
@@ -313,7 +313,7 @@ const avtSubtitle = (theme) => ({
         lineHeight: "2rem",
     },
 });
-const avtImage = (theme) => ({
+const avtImage = (theme: any) => ({
     width: "4.0625rem",
     height: "4.0625rem",
     borderRadius: "4.0625rem",
@@ -331,7 +331,7 @@ const avtImage = (theme) => ({
     },
 });
 
-const menuItem = (theme) => ({
+const menuItem = (theme: any) => ({
     color: "#1E1E1C",
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.5rem",
@@ -343,7 +343,7 @@ const menuItem = (theme) => ({
         lineHeight: "1.875rem",
     },
 });
-const menuBtn = (theme) => ({
+const menuBtn = (theme: any) => ({
     marginLeft: "auto",
     background: "#2599FB",
     color: "#fff",
@@ -357,17 +357,17 @@ const menuBtn = (theme) => ({
         display: "none",
     },
 });
-const navWrap = (theme) => ({
+const navWrap = (theme: any) => ({
     flexDirection: "row",
     [theme.breakpoints.down("xl")]: {
         fontSize: "1.125rem",
         lineHeight: "1.875rem",
     },
 });
-const mobileNavmain = (theme) => ({
+const mobileNavmain = (theme: any) => ({
     padding: "1rem",
 });
-const smallNavitem = (theme) => ({
+const smallNavitem = (theme: any) => ({
     display: "flex",
     marginTop: "1rem",
 });
