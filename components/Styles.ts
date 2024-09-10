@@ -1,5 +1,5 @@
 
-const container = (theme) => ({
+const container = (theme: any) => ({
     maxWidth: "1560px",
     marginLeft: "auto",
     marginRight: "auto",
@@ -13,7 +13,7 @@ const container = (theme) => ({
         maxWidth: "1450px",
     },
 });
-const inputField = (theme) => ({
+const inputField = (theme: any) => ({
     "& .MuiInputBase-root": {
         borderRadius: "0.625rem",
         [theme.breakpoints.down("xl")]: {
@@ -92,7 +92,7 @@ const sliderBtnStyle = () => ({
         },
     },
 });
-const sliderBtnOutside = (theme) => ({
+const sliderBtnOutside = (theme: any) => ({
     background: "#FFF3CB",
     width: "2.9375rem",
     height: "3rem",
@@ -115,7 +115,7 @@ const sliderBtnOutside = (theme) => ({
         height: "1.75rem",
     },
 });
-const PrevBtn = (theme) => ({
+const PrevBtn = (theme: any) => ({
     left: "-5rem",
     [theme.breakpoints.down("lg")]: {
         left: "-3rem",
@@ -124,7 +124,7 @@ const PrevBtn = (theme) => ({
         left: "-1rem",
     },
 });
-const NextBtn = (theme) => ({
+const NextBtn = (theme: any) => ({
     right: "-5rem",
     [theme.breakpoints.down("lg")]: {
         right: "-3rem",
@@ -133,7 +133,7 @@ const NextBtn = (theme) => ({
         right: "-1rem",
     },
 });
-const title = (theme) => ({
+const title = (theme: any) => ({
     color: "#1E1E1C",
     fontFamily: "'Karla', sans-serif",
     fontSize: "2.1875rem",
@@ -148,7 +148,7 @@ const title = (theme) => ({
         fontSize: "1.25rem",
     },
 });
-const subTitle = (theme) => ({
+const subTitle = (theme: any) => ({
     color: "#727272",
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.5rem",
@@ -196,7 +196,7 @@ const calendarSmallStyle = () => ({
         },
     },
 });
-const calenderStyle = (theme) => ({
+const calenderStyle = (theme: any) => ({
     "& .fc-header-toolbar": {
         flexWrap: "wrap",
         "& .fc-toolbar-chunk": {
@@ -323,7 +323,7 @@ const bookingHints = () => ({
     width: "100%",
     left: 0,
 });
-const noDataFound = (theme) => ({
+const noDataFound = (theme: any) => ({
     color: "#f95959",
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.5rem",
@@ -334,7 +334,7 @@ const noDataFound = (theme) => ({
         fontSize: "1.125rem",
     },
 });
-const calendarDayNum = (theme) => ({
+const calendarDayNum = (theme: any) => ({
     fontWeight: "500",
     fontSize: "24px",
     lineHeight: "150%",
@@ -348,7 +348,7 @@ const calendarDayNum = (theme) => ({
     },
 });
 
-const calendarDay = (theme) => ({
+const calendarDay = (theme: any) => ({
     fontWeight: "500",
     fontSize: "24px",
     lineHeight: "150%",
@@ -361,7 +361,7 @@ const calendarDay = (theme) => ({
     },
 });
 
-const newCalstyles = (theme) => ({
+const newCalstyles = (theme: any) => ({
     "& .fc-day-today": {
         position: "relative",
 
@@ -495,7 +495,7 @@ const newCalstyles = (theme) => ({
         m: 0,
     },
 });
-const itemList = (theme) => ({
+const itemList = (theme: any) => ({
     fontFamily: "'Karla', sans-serif",
     fontSize: "1.25rem",
     fontWeight: 600,
