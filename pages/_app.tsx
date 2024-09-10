@@ -6,10 +6,10 @@ import Header from "../components/Header";
 function MyApp({ Component, pageProps }: any) {
     return (
         <>
-            <NextUIProvider>
-                <Header />
-                <Component {...pageProps} />
-            </NextUIProvider>
+            {/* <NextUIProvider> */}
+            {/* <Header /> */}
+            <Component {...pageProps} />
+            {/* </NextUIProvider> */}
         </>
     );
 }
