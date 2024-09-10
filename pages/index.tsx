@@ -3,7 +3,7 @@ import Link from "next/link";
 import { gql } from "@apollo/client";
 import Image from "next/image";
 import { getApolloClient } from "../lib/apollo-client";
-import categoryStyles from './category.module.css'
+import categoryStyles from './category/category.module.css'
 import styles from "./index.module.css";
 
 export default function Home({ categories, page }: any) {
