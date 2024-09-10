@@ -34,7 +34,7 @@ export default function Post({ post, site, language, ...props }: any) {
   );
 }
 
-export async function getStaticProps({ params, locale, ...props }: any) {
+export async function getStaticProps({ params, locale }: any) {
   const { postSlug } = params;
   const language = locale.toUpperCase();
   const apolloClient = getApolloClient();

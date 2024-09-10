@@ -3,13 +3,13 @@ import Link from "next/link";
 import { gql } from "@apollo/client";
 import Image from "next/image";
 import { getApolloClient } from "../lib/apollo-client";
-import categoryStyles from './category/category.module.css'
-import styles from "./index.module.css";
+// import categoryStyles from './category/category.module.css'
+import indexStyles from "./index.module.css";
 
 export default function Home({ categories, page }: any) {
   const { title, description } = page;
   console.log("categories:", categories);
-  const Categories = () => <ul className={styles.categories}>{(categories || []).map(({ node: item }: any) => {
+  const Categories = () => <ul className={indexStyles.categories}>{(categories || []).map(({ node: item }: any) => {
     return (
       <li key={`/category/${item.slug}`}
       //className={styles.card}
@@ -26,7 +26,7 @@ export default function Home({ categories, page }: any) {
   }</ul>
 
   return (
-    <div className={styles.container}>
+    <div className={indexStyles.container}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -35,26 +35,26 @@ export default function Home({ categories, page }: any) {
 
       <Categories />
 
-      <main className={categoryStyles.main}>
-        <div className={categoryStyles.background} />
-        <p className={styles.description}>{description}</p>
+      <main className={indexStyles.main}>
+        <div className={indexStyles.background} />
+        <p className={indexStyles.description}>{description}</p>
 
-        <ul className={styles.grid}>
+        <ul className={indexStyles.grid}>
           {categories &&
             categories.length > 0 &&
             categories.map(({ node: category }: any) => {
               return category.posts.nodes.length ?
                 (
                   <div key={category.slug}>
-                    <Link href={`/category/${category.slug}`} className={categoryStyles.link}>
-                      <h3 className={`${categoryStyles.h3} ${categoryStyles.link}`}>{category.description}</h3>
+                    <Link href={`/category/${category.slug}`} className={indexStyles.link}>
+                      <h3 className={`${indexStyles.h3} ${indexStyles.link}`}>{category.description}</h3>
                     </Link>
 
-                    <ul className={categoryStyles.postExcerptContainer}>
+                    <ul className={indexStyles.postExcerptContainer}>
                       {category.posts.nodes && category.posts.nodes.map((post: any) => {
 
                         return (
-                          <li key={post.name} className={categoryStyles.postExcerpt} >
+                          <li key={post.name} className={indexStyles.postExcerpt} >
                             <Link href={post.uri}>
 
                               {post.featuredImage?.node?.sourceUrl &&
@@ -67,7 +67,7 @@ export default function Home({ categories, page }: any) {
                                     height={800}
                                     alt={post.title}
                                     // className="absolute rounded-md h-full w-full object-cover"
-                                    className={styles.featuredImage}
+                                    className={indexStyles.featuredImage}
                                   />
                                 </div>}
                               <h3
@@ -76,7 +76,7 @@ export default function Home({ categories, page }: any) {
                                 }}
                               />
                               <div
-                                className={styles.excerpt}
+                                className={indexStyles.excerpt}
                                 dangerouslySetInnerHTML={{
                                   __html: post.excerpt,
                                 }}
@@ -98,7 +98,6 @@ export default function Home({ categories, page }: any) {
 
 export async function getStaticProps({ locale }: any) {
   const apolloClient = getApolloClient();
-  // console.log("process", process.env)
   const language = locale.toUpperCase();
 
   const getPostsForEachCategory = await apolloClient.query({
