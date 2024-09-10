@@ -27,10 +27,10 @@ export function _createApolloClient() {
     });
 }
 
-const cache = new InMemoryCache({
-    typePolicies: {
-        Language: {
-            keyFields: ["es", "en", "fr", "de"],
-        },
-    },
-});
+// const cache = new InMemoryCache({
+//     typePolicies: {
+//         Language: {
+//             keyFields: ["es", "en", "fr", "de"],
+//         },
+//     },
+// });
